@@ -16,19 +16,19 @@ const SchoolCarousel = () => {
       >
         <div>
           <img src="https://via.placeholder.com/800x400" alt="Event 1" />
-          <div className="text-sm md:text-base w-full absolute bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded translate-y-[-10px]">
+          <div className="text-sm md:text-xl w-full absolute bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded translate-y-[-10px]">
             Annual Sports Day - Celebrating Excellence in Sports
           </div>
         </div>
         <div>
           <img src="https://via.placeholder.com/800x400" alt="Event 2" />
-          <div className="text-sm md:text-base w-full absolute bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded translate-y-[-10px]">
+          <div className="text-sm md:text-xl w-full absolute bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded translate-y-[-10px]">
             Science Exhibition - Showcasing Student Innovations
           </div>
         </div>
         <div>
           <img src="https://via.placeholder.com/800x400" alt="Event 3" />
-          <div className="text-sm md:text-base w-full absolute bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded translate-y-[-10px]">
+          <div className="text-sm md:text-xl w-full absolute bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded translate-y-[-10px]">
             Cultural Fest - Embracing Diversity and Creativity
           </div>
         </div>
