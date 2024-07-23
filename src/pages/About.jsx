@@ -9,7 +9,7 @@ import Infrastructure from '../components/About/Infrastructure';
 
 const AboutPage = () => {
   return (
-    <div className="about-page bg-gray-100 text-gray-800">
+    <div className="about-page ">
       <HeroSection />
       <div className="container mx-auto py-10 px-4">
         {/* <h1 className="text-4xl font-bold text-center mb-10">About Us</h1> */}

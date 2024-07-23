@@ -8,7 +8,7 @@ const VisionMission = () => {
       
       <div className="grid md:grid-cols-2 gap-6">
         {/* Vision Section */}
-        <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+        <div className="p-6 bg-green-100 rounded-lg shadow-md border border-gray-200">
           <h3 className="text-2xl font-semibold mb-4">Vision</h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
             <li>To create a learning environment that fosters academic excellence.</li>
@@ -18,7 +18,7 @@ const VisionMission = () => {
         </div>
         
         {/* Mission Section */}
-        <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+        <div className="p-6 bg-pink-100  rounded-lg shadow-md border border-gray-200">
           <h3 className="text-2xl font-semibold mb-4">Mission</h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
             <li>To empower students with the knowledge and skills needed for success.</li>

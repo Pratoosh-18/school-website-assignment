@@ -21,7 +21,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-50 bg-white p-4 shadow-md h-[10vh] flex justify-center items-center">
+    <div>
+
+    <nav className="fixed w-full z-50 bg-white p-4 shadow-md h-[10vh] flex justify-center items-center">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <Link to="/" className="text-black text-2xl font-bold flex items-center">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9LGwkLaGeY6-5wk8LcJnXApdy1LXUyqFQjw&s" alt="Logo" className="h-[60px]" />
@@ -35,7 +37,7 @@ const Navbar = () => {
           className={`flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 absolute lg:static bg-white w-full lg:w-auto left-0 lg:left-auto transition-all duration-300 ease-in-out ${
             menuOpen ? 'top-[10vh] opacity-100 z-40' : 'top-[-100vh] lg:opacity-100 opacity-0'
           }`}
-        >
+          >
           {['/', '/about', '/academics', '/admissions', '/faculty', '/students', '/gallery', '/contact'].map((path) => (
             <li key={path} className="text-center lg:text-left">
               <Link
@@ -44,7 +46,7 @@ const Navbar = () => {
                   activeLink === path ? 'text-[#ff2020] border-b-2 border-[#ff2020]' : 'text-black hover:text-[#ff2020]'
                 }`}
                 onClick={() => handleClick(path)}
-              >
+                >
                 {path === '/' ? 'Home' : path.replace('/', '').charAt(0).toUpperCase() + path.slice(2).replace('/', '')}
               </Link>
             </li>
@@ -52,6 +54,10 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
+    <div className='h-[10vh]'>
+
+    </div>
+          </div>
   );
 };
 

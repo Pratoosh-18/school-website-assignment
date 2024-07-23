@@ -21,11 +21,11 @@ const HomePage = () => {
       {/* Carousel component */}
       <SchoolCarousel />
 
-      <section className="introduction py-12 px-6 bg-red-50 text-center rounded-lg shadow-md">
-        <h2 className="text-2xl md:text-5xl font-bold text-gray-800">
+      <section className="mt-10 introduction py-12 px-6 bg-red-50 text-center rounded-lg shadow-md">
+        {/* <h2 className="text-2xl md:text-5xl font-bold text-gray-800">
           Introduction
-        </h2>
-        <p className="text-base md:text-xl mt-4 max-w-3xl mx-auto leading-relaxed text-gray-800">
+        </h2> */}
+        <p className="text-base md:text-2xl mt-4 w-[90%] md:w-[80%] mx-auto leading-relaxed font-semibold text-gray-800">
           Welcome to Springdale Public School, a place where we are dedicated to
           nurturing young minds and fostering a love for learning. Our
           commitment to excellence in education and holistic development ensures
