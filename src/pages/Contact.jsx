@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaRegPaperPlane } from 'react-icons/fa';
 
 const ContactPage = () => {
   return (
@@ -6,35 +7,69 @@ const ContactPage = () => {
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-10">Contact Us</h2>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg mb-10">
-          <h3 className="text-3xl font-semibold mb-4">Address</h3>
-          <p className="text-lg">Springdale Public School, 123 Education Lane, Cityville, State, ZIP Code</p>
-        </div>
+        <div>
+      {/* Address Section */}
+      <div className="bg-white p-6 rounded-lg mb-10 border border-gray-200 hover:bg-gray-50 transition-colors">
+        <h3 className="text-3xl font-semibold mb-4 flex items-center">
+          <FaMapMarkerAlt className="text-green-600 mr-3" /> Address
+        </h3>
+        <p className="text-lg">Springdale Public School, 123 Education Lane, Cityville, State, ZIP Code</p>
+      </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg mb-10">
-          <h3 className="text-3xl font-semibold mb-4">Contact Information</h3>
-          <p className="text-lg"><strong>Phone:</strong> +1 (123) 456-7890</p>
-          <p className="text-lg"><strong>Email:</strong> <a href="mailto:info@springdale.edu" className="text-blue-600 underline">info@springdale.edu</a></p>
-        </div>
+      {/* Contact Information Section */}
+      <div className="bg-white p-6 rounded-lg mb-10 border border-gray-200 hover:bg-gray-50 transition-colors">
+        <h3 className="text-3xl font-semibold mb-4 flex items-center">
+          <FaPhoneAlt className="text-blue-600 mr-3" /> Contact Information
+        </h3>
+        <p className="text-lg"><strong>Phone:</strong> +1 (123) 456-7890</p>
+        <p className="text-lg"><strong>Email:</strong> <a href="mailto:info@springdale.edu" className="text-blue-600 hover:underline">info@springdale.edu</a></p>
+      </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg mb-10">
-          <h3 className="text-3xl font-semibold mb-4">Contact Form</h3>
-          <form className="space-y-4">
-            <div>
-              <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
-              <input type="text" id="name" name="name" className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email</label>
-              <input type="email" id="email" name="email" className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-lg font-medium text-gray-700">Message</label>
-              <textarea id="message" name="message" rows="4" className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required></textarea>
-            </div>
-            <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Send Message</button>
-          </form>
-        </div>
+      {/* Contact Form Section */}
+      <div className="bg-white p-6 rounded-lg mb-10 border border-gray-200 hover:bg-gray-50 transition-colors">
+        <h3 className="text-3xl font-semibold mb-4 flex items-center">
+          <FaRegPaperPlane className="text-orange-600 mr-3" /> Contact Form
+        </h3>
+        <form className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              className="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" 
+              required 
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              className="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" 
+              required 
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-lg font-medium text-gray-700">Message</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              className="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" 
+              required
+            ></textarea>
+          </div>
+          <button 
+            type="submit" 
+            className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
 
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-3xl font-semibold mb-4">Our Location</h3>
