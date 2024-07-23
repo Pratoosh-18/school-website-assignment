@@ -56,7 +56,7 @@ const infrastructureItems = [
 const Infrastructure = () => {
   return (
     <div className="infrastructure p-6 bg-gray-100">
-      <h2 className="text-4xl font-bold mb-8 text-center">Infrastructure and Facilities</h2>
+      <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center">Infrastructure and Facilities</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {infrastructureItems.map((item, index) => (
           <div
