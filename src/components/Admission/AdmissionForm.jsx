@@ -1,19 +1,45 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AdmissionFormContext from '../../context/AdmissionFormContext';
-
 
 const AdmissionForm = () => {
   const { formState, updateFormState } = useContext(AdmissionFormContext);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     updateFormState(name, files ? files[0] : value);
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formState.name) newErrors.name = 'Name is required';
+    if (!formState.email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formState.email)) {
+      newErrors.email = 'Email address is invalid';
+    }
+    if (!formState.phone) {
+      newErrors.phone = 'Phone is required';
+    } else if (!/^\d{10}$/.test(formState.phone)) {
+      newErrors.phone = 'Phone number is invalid';
+    }
+    if (!formState.grade) newErrors.grade = 'Grade is required';
+
+    return newErrors;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formState);
+    const newErrors = validateForm();
+
+    if (Object.keys(newErrors).length === 0) {
+      // No errors, proceed with form submission
+      console.log(formState);
+    } else {
+      // Set validation errors
+      setErrors(newErrors);
+    }
   };
 
   return (
@@ -27,9 +53,10 @@ const AdmissionForm = () => {
             name="name"
             value={formState.name}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded"
+            className={`w-full p-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded`}
             required
           />
+          {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
         </div>
         <div>
           <label className="block text-gray-700 font-semibold mb-2">Email</label>
@@ -38,9 +65,10 @@ const AdmissionForm = () => {
             name="email"
             value={formState.email}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded"
+            className={`w-full p-2 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded`}
             required
           />
+          {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
         </div>
         <div>
           <label className="block text-gray-700 font-semibold mb-2">Phone</label>
@@ -49,9 +77,10 @@ const AdmissionForm = () => {
             name="phone"
             value={formState.phone}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded"
+            className={`w-full p-2 border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded`}
             required
           />
+          {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
         </div>
         <div>
           <label className="block text-gray-700 font-semibold mb-2">Grade</label>
@@ -60,9 +89,10 @@ const AdmissionForm = () => {
             name="grade"
             value={formState.grade}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded"
+            className={`w-full p-2 border ${errors.grade ? 'border-red-500' : 'border-gray-300'} rounded`}
             required
           />
+          {errors.grade && <p className="text-red-500 text-sm">{errors.grade}</p>}
         </div>
         <div className="md:col-span-2">
           <label className="block text-gray-700 font-semibold mb-2">Upload Documents</label>
