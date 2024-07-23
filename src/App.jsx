@@ -9,6 +9,7 @@ import FacultyPage from "./pages/Faculty";
 import StudentsPage from "./pages/Students";
 import GalleryPage from "./pages/Gallery";
 import ContactPage from "./pages/Contact";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

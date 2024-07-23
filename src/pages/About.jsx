@@ -12,7 +12,7 @@ const AboutPage = () => {
     <div className="about-page bg-gray-100 text-gray-800">
       <HeroSection />
       <div className="container mx-auto py-10 px-4">
-        <h1 className="text-4xl font-bold text-center mb-10">About Us</h1>
+        {/* <h1 className="text-4xl font-bold text-center mb-10">About Us</h1> */}
         <History />
         <VisionMission />
         <PrincipalMessage />
